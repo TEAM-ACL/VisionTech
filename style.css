@@ -1,45 +1,39 @@
-/* 
-VisionTech Demo Website
-Author: ACL
-Purpose: simple presentation site for project explanation
-*/
+/* VisionTech Website Styling */
+/* ACL */
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin:0;
-    background:#f4f4f4;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f7fa;
 }
 
-header{
-    background:#1f2937;
-    color:white;
-    padding:40px;
-    text-align:center;
+header {
+    background: #0b3d91;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
-nav{
-    background:#111827;
-    text-align:center;
-    padding:10px;
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
 }
 
-nav a{
-    color:white;
-    margin:0 15px;
-    text-decoration:none;
-    font-weight:bold;
+.hero {
+    text-align: center;
+    padding: 80px;
+    background: #e6ecff;
 }
 
-section{
-    padding:40px;
-    background:white;
-    margin:20px;
-    border-radius:8px;
+section {
+    padding: 40px;
 }
 
-footer{
-    text-align:center;
-    padding:20px;
-    background:#1f2937;
-    color:white;
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0b3d91;
+    color: white;
 }
