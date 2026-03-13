@@ -331,6 +331,49 @@ small {
     margin-top: 10px;
 }
 
+.architecture__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    align-items: start;
+}
+
+.highlight h3,
+.flow h3,
+.stack h3 {
+    margin-top: 0;
+}
+
+.flow__items {
+    display: grid;
+    gap: 12px;
+}
+
+.flow__item {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    gap: 10px;
+    align-items: start;
+}
+
+.flow .dot {
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    box-shadow: 0 0 0 6px rgba(15, 98, 254, 0.1);
+}
+
+.flow__item strong {
+    display: block;
+    color: var(--text);
+}
+
+.architecture .card {
+    min-height: 100%;
+}
+
 .site-footer {
     text-align: center;
     padding: 28px 7vw 36px;

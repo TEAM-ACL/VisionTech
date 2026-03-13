@@ -15,6 +15,7 @@
         <nav class="nav">
             <a href="#about">About</a>
             <a href="#innovation">Innovation</a>
+            <a href="#architecture">AI Architecture</a>
             <a href="#vision">Vision</a>
             <a href="#roadmap">Roadmap</a>
             <a class="pill" href="#contact">Join</a>
@@ -60,13 +61,13 @@
 
         <section id="about" class="section grid">
             <div>
-                <h1><p class="eyebrow">THE PROBLEM</p></h1>
+                <p class="eyebrow">The problem</p>
                 <h2>Talent is everywhere, access is not.</h2>
                 <p>Young people struggle to find collaborators, mentorship, and opportunities that fit their potential. VisionTech uses AI to map strengths, goals, and momentum to the right people, projects, and roles.</p>
             </div>
             <div class="card-list">
                 <div class="card">
-                    <h3>Barriers Today</h3>
+                    <h3>Barriers today</h3>
                     <ul>
                         <li>Limited access to mentors with relevant experience</li>
                         <li>Fragmented pathways from learning to real projects</li>
@@ -74,7 +75,7 @@
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Our Edge</h3>
+                    <h3>Our edge</h3>
                     <ul>
                         <li>AI matching that understands skills, intent, and fit</li>
                         <li>Structured challenges that convert ideas into outcomes</li>
@@ -86,7 +87,7 @@
 
         <section id="innovation" class="section">
             <div class="section__header">
-                <h1><p class="eyebrow">SOLUTION PILLARS</p></h1>
+                <p class="eyebrow">Solution pillars</p>
                 <h2>Designed to move youth from potential to impact.</h2>
             </div>
             <div class="pillars">
@@ -125,9 +126,86 @@
             </div>
         </section>
 
+        <section id="architecture" class="section architecture">
+            <div class="section__header">
+                <p class="eyebrow">AI structural innovation</p>
+                <h2>Collaboration intelligence built on semantic, vector, and feedback layers.</h2>
+                <p class="lede">VisionTech doesn’t just recommend content or jobs; it orchestrates people, teams, and opportunities through a layered AI architecture that keeps learning.</p>
+            </div>
+            <div class="architecture__grid">
+                <div class="card highlight">
+                    <h3>Core innovations</h3>
+                    <ul>
+                        <li>Semantic understanding turns skills, goals, and intent into embeddings.</li>
+                        <li>Vector matching engine scores compatibility across people, teams, and opportunities.</li>
+                        <li>Behaviour learning loop refines matches using acceptance and engagement signals.</li>
+                        <li>Recommendation intelligence proposes learning paths, mentors, and challenges.</li>
+                    </ul>
+                </div>
+                <div class="card flow">
+                    <h3>Technical flow</h3>
+                    <div class="flow__items">
+                        <div class="flow__item">
+                            <span class="dot"></span>
+                            <div>
+                                <strong>Capture</strong>
+                                <p>Profiles ingest skills, goals, preferences.</p>
+                            </div>
+                        </div>
+                        <div class="flow__item">
+                            <span class="dot"></span>
+                            <div>
+                                <strong>Embed</strong>
+                                <p>OpenAI embeddings translate profiles into vectors.</p>
+                            </div>
+                        </div>
+                        <div class="flow__item">
+                            <span class="dot"></span>
+                            <div>
+                                <strong>Store</strong>
+                                <p>Vectors persisted in pgvector or Pinecone for fast similarity search.</p>
+                            </div>
+                        </div>
+                        <div class="flow__item">
+                            <span class="dot"></span>
+                            <div>
+                                <strong>Match</strong>
+                                <p>Cosine similarity plus compatibility logic propose collaborators and teams.</p>
+                            </div>
+                        </div>
+                        <div class="flow__item">
+                            <span class="dot"></span>
+                            <div>
+                                <strong>Recommend</strong>
+                                <p>LLM and rules rank learning paths, mentors, and project opportunities.</p>
+                            </div>
+                        </div>
+                        <div class="flow__item">
+                            <span class="dot"></span>
+                            <div>
+                                <strong>Learn</strong>
+                                <p>Feedback signals tune scores, creating defensible IP over time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card stack">
+                    <h3>Reference stack (MVP)</h3>
+                    <ul>
+                        <li>Frontend: Next.js with Tailwind for rapid iteration.</li>
+                        <li>Backend: FastAPI with REST/GraphQL endpoints.</li>
+                        <li>AI: OpenAI embeddings and LLM reasoning prompts.</li>
+                        <li>Data: PostgreSQL with pgvector; optional Pinecone for scale.</li>
+                        <li>Hosting: Vercel for web; cloud credits on AWS/Azure for services.</li>
+                        <li>Analytics: Event capture to refine matching and recommendations.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <section id="vision" class="section grid">
             <div>
-                <h1><p class="eyebrow">VISION</p></h1>
+                <p class="eyebrow">Vision</p>
                 <h2>Build the world’s most effective youth empowerment ecosystem.</h2>
                 <p>We want every young person to move from curiosity to competence to contribution—faster, with support that feels tailored and human.</p>
             </div>
@@ -135,7 +213,7 @@
 
          <section id="mission" class="section grid">
             <div>
-                <h1><p class="eyebrow">MISSION</p></h1>
+                <p class="eyebrow">Mission</p>
                 <h2>Equip young people.</h2>
                 <p>We want to equip young people with education, digital skills, mentorship, and project-based experiences that unlock economic opportunities while nurturing innovation and purpose-driven leadership.</p>
             </div>
@@ -143,7 +221,7 @@
 
         <section id="roadmap" class="section">
             <div class="section__header">
-                <h1><p class="eyebrow">ROADMAP</p></h1>
+                <p class="eyebrow">Roadmap</p>
                 <h2>From MVP to global scale.</h2>
             </div>
             <ol class="timeline">
