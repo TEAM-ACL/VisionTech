@@ -201,6 +201,43 @@
                     </ul>
                 </div>
             </div>
+            <div class="card arch-flow">
+                <h3>High-level system flow</h3>
+                <ol class="arch-steps">
+                    <li>
+                        <strong>Client</strong>
+                        <p>Web app collects profile inputs, goals, and preferences.</p>
+                    </li>
+                    <li>
+                        <strong>API Gateway</strong>
+                        <p>Routes requests to profile, matching, and recommendation services.</p>
+                    </li>
+                    <li>
+                        <strong>Profile Store</strong>
+                        <p>PostgreSQL holds structured user data and signals.</p>
+                    </li>
+                    <li>
+                        <strong>Embedding Service</strong>
+                        <p>Generates vectors from profiles and opportunities via OpenAI embeddings.</p>
+                    </li>
+                    <li>
+                        <strong>Vector DB</strong>
+                        <p>pgvector/Pinecone enables fast similarity and compatibility search.</p>
+                    </li>
+                    <li>
+                        <strong>Matching Engine</strong>
+                        <p>Cosine similarity plus rules output people/team/opportunity matches.</p>
+                    </li>
+                    <li>
+                        <strong>Recommendation Engine</strong>
+                        <p>LLM + ranking layer surfaces learning paths, mentors, and challenges.</p>
+                    </li>
+                    <li>
+                        <strong>Feedback Loop</strong>
+                        <p>Engagement and acceptance signals retrain scores and improve quality.</p>
+                    </li>
+                </ol>
+            </div>
         </section>
 
         <section id="vision" class="section grid">
