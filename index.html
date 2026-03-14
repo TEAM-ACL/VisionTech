@@ -143,20 +143,22 @@
             <div class="section__header">
                 <p class="eyebrow">AI structural innovation</p>
                 <h2>Collaboration intelligence built on semantic, vector, and feedback layers.</h2>
-                <p class="lede">VisionTech doesn’t just recommend content or jobs; it orchestrates people, teams, and opportunities through a layered AI architecture that keeps learning.</p>
+                <p class="lede">How it works, at a glance: we capture rich profile signals, translate them into vectors, run compatibility search, then refine with behaviour so every match and recommendation keeps improving.</p>
             </div>
             <div class="architecture__grid">
                 <div class="card highlight">
-                    <h3>Core innovations</h3>
+                    <h3>What makes it different</h3>
+                    <p class="lede-small">Beyond keyword filters, VisionTech models meaning, fit, and momentum to recommend people, teams, and opportunities—not just content.</p>
                     <ul>
-                        <li>Semantic understanding turns skills, goals, and intent into embeddings.</li>
-                        <li>Vector matching engine scores compatibility across people, teams, and opportunities.</li>
-                        <li>Behaviour learning loop refines matches using acceptance and engagement signals.</li>
-                        <li>Recommendation intelligence proposes learning paths, mentors, and challenges.</li>
+                        <li>Semantic understanding converts skills, goals, and intent into embeddings.</li>
+                        <li>Vector matching scores compatibility across users, teams, and opportunities.</li>
+                        <li>Behaviour learning loop improves results with acceptance and engagement signals.</li>
+                        <li>Recommendation intelligence ranks learning paths, mentors, and challenges.</li>
                     </ul>
                 </div>
                 <div class="card flow">
-                    <h3>Technical flow</h3>
+                    <h3>Layered flow (reader’s guide)</h3>
+                    <p class="lede-small">Each step feeds the next: capture → embed → store → match → recommend → learn.</p>
                     <div class="flow__items">
                         <div class="flow__item">
                             <span class="dot"></span>
@@ -176,14 +178,14 @@
                             <span class="dot"></span>
                             <div>
                                 <strong>Store</strong>
-                                <p>Vectors persisted in pgvector or Pinecone for fast similarity search.</p>
+                                <p>Vectors kept in pgvector or Pinecone for fast similarity search.</p>
                             </div>
                         </div>
                         <div class="flow__item">
                             <span class="dot"></span>
                             <div>
                                 <strong>Match</strong>
-                                <p>Cosine similarity plus compatibility logic propose collaborators and teams.</p>
+                                <p>Cosine similarity plus compatibility logic proposes collaborators and teams.</p>
                             </div>
                         </div>
                         <div class="flow__item">
@@ -204,6 +206,7 @@
                 </div>
                 <div class="card stack">
                     <h3>Reference stack (MVP)</h3>
+                    <p class="lede-small">Practical choices to ship quickly while keeping a path to scale.</p>
                     <ul>
                         <li>Frontend: Next.js with Tailwind for rapid iteration.</li>
                         <li>Backend: FastAPI with REST/GraphQL endpoints.</li>
@@ -215,6 +218,7 @@
                 </div>
                 <div class="card stack">
                     <h3>Model stack in VisionTech</h3>
+                    <p class="lede-small">Mapped to the five layers so teams know what to build now vs later.</p>
                     <ul>
                         <li><strong>Layer 1 – Data collection:</strong> NER + Sentence-BERT/MiniLM embeddings to structure profiles, interests, and intent.</li>
                         <li><strong>Layer 2 – AI understanding:</strong> BERT/RoBERTa with multi-label classifiers to tag goals, skills, and themes.</li>

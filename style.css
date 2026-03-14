@@ -370,6 +370,12 @@ small {
     color: var(--text);
 }
 
+.lede-small {
+    color: var(--muted);
+    margin: 6px 0 10px;
+    line-height: 1.5;
+}
+
 .architecture .card {
     min-height: 100%;
 }
