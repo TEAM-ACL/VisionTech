@@ -213,6 +213,17 @@
                         <li>Analytics: Event capture to refine matching and recommendations.</li>
                     </ul>
                 </div>
+                <div class="card stack">
+                    <h3>Model stack in VisionTech</h3>
+                    <ul>
+                        <li><strong>Layer 1 – Data collection:</strong> NER + Sentence-BERT/MiniLM embeddings to structure profiles, interests, and intent.</li>
+                        <li><strong>Layer 2 – AI understanding:</strong> BERT/RoBERTa with multi-label classifiers to tag goals, skills, and themes.</li>
+                        <li><strong>Layer 3 – Matching engine:</strong> Content-based cosine similarity + hybrid recommender (two-tower ready) for user↔user and user↔opportunity matches.</li>
+                        <li><strong>Layer 4 – Behavioural learning:</strong> LightGBM/XGBoost and bandit-style ranking that learn from accept/decline and engagement signals.</li>
+                        <li><strong>Layer 5 – Recommendation:</strong> Learning-to-rank with LLM re-ranking for final mentor, team, and opportunity suggestions.</li>
+                        <li><strong>Stage path:</strong> MVP uses embeddings + cosine + simple collaborative filtering; growth introduces two-tower/graph signals; scale adds learning-to-rank and contextual bandits.</li>
+                    </ul>
+                </div>
             </div>
             <div class="card arch-flow">
                 <h3>High-level system flow</h3>
