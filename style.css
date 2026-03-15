@@ -588,6 +588,8 @@ small {
 .svg-data { fill: #f3e8ff; stroke: #7b1fa2; stroke-width: 2; }
 .svg-arrow { stroke: #333; stroke-width: 2; marker-end: url(#vtArrow); }
 .svg-text { font-size: 13px; text-anchor: middle; dominant-baseline: middle; fill: #0f172a; }
+.svg-group-outline { fill: transparent; stroke-width: 3; }
+.svg-group-label { font-size: 14px; font-weight: 700; fill: #0f172a; }
 
 .site-footer {
     text-align: center;
