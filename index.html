@@ -268,6 +268,47 @@
             </div>
         </section>
 
+        <section id="tech-diagram" class="section diagram">
+            <div class="section__header">
+                <p class="eyebrow">Technical diagram</p>
+                <h2>System flow from intake to recommendations.</h2>
+                <p class="lede">Simplified architecture using standard shapes: rectangles for services, cylinders for data stores, diamonds for decisions, and circles for start/end.</p>
+            </div>
+            <div class="diagram__legend">
+                <span class="shape start">Start/End</span>
+                <span class="shape process">Process</span>
+                <span class="shape decision">Decision</span>
+                <span class="shape datastore">Data store</span>
+            </div>
+            <div class="diagram__flow">
+                <div class="node start">Client</div>
+                <div class="arrow">▶</div>
+                <div class="node process">API Gateway</div>
+                <div class="arrow">▶</div>
+                <div class="node process">Profile Service</div>
+                <div class="arrow">▶</div>
+                <div class="node datastore">PostgreSQL<br>+ pgvector</div>
+                <div class="arrow">▶</div>
+                <div class="node process">Embedding Service<br>(OpenAI)</div>
+                <div class="arrow">▶</div>
+                <div class="node datastore">Vector Store<br>(pgvector / Pinecone)</div>
+                <div class="arrow">▶</div>
+                <div class="node process">Matching Engine<br>(cosine + rules)</div>
+                <div class="arrow">▶</div>
+                <div class="node decision">Rank?</div>
+                <div class="branch">
+                    <div class="arrow down">▼</div>
+                    <div class="node process">Recommendation Engine<br>(LTR + LLM re-rank)</div>
+                </div>
+                <div class="arrow">▶</div>
+                <div class="node process">Delivery Layer<br>(Web, Email, Notifications)</div>
+                <div class="arrow">▶</div>
+                <div class="node process">Analytics & Feedback</div>
+                <div class="arrow">▶</div>
+                <div class="node start">Learn/Improve</div>
+            </div>
+        </section>
+
         <section id="roadmap" class="section">
             <div class="section__header">
                 <p class="eyebrow">Roadmap</p>
