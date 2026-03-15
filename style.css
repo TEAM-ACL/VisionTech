@@ -566,6 +566,29 @@ small {
     color: var(--muted);
 }
 
+.svg-diagram {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 14px;
+    margin-top: 14px;
+    overflow: auto;
+}
+
+.svg-diagram svg {
+    width: 100%;
+    height: auto;
+    min-width: 720px;
+}
+
+.svg-box { fill: #e8f0ff; stroke: #0b3d91; stroke-width: 2; }
+.svg-process { fill: #e6ffe6; stroke: #2e7d32; stroke-width: 2; }
+.svg-decision { fill: #fff4e6; stroke: #ff9800; stroke-width: 2; }
+.svg-data { fill: #f3e8ff; stroke: #7b1fa2; stroke-width: 2; }
+.svg-arrow { stroke: #333; stroke-width: 2; marker-end: url(#vtArrow); }
+.svg-text { font-size: 13px; text-anchor: middle; dominant-baseline: middle; fill: #0f172a; }
+
 .site-footer {
     text-align: center;
     padding: 28px 7vw 36px;
