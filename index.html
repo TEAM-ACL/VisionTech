@@ -272,7 +272,7 @@
             <div class="section__header">
                 <p class="eyebrow">Technical diagram</p>
                 <h2>System flow from intake to recommendations.</h2>
-                <p class="lede">Simplified architecture using standard shapes: rectangles for services, cylinders for data stores, diamonds for decisions, and circles for start/end.</p>
+                <p class="lede">Left-to-right flow. Shapes: circles = start/end, rectangles = services, cylinders = data, diamonds = decisions.</p>
             </div>
             <div class="diagram__legend">
                 <span class="shape start">Start/End</span>
@@ -282,30 +282,26 @@
             </div>
             <div class="diagram__flow">
                 <div class="node start">Client</div>
-                <div class="arrow">▶</div>
+                <div class="arrow h">→</div>
                 <div class="node process">API Gateway</div>
-                <div class="arrow">▶</div>
+                <div class="arrow h">→</div>
                 <div class="node process">Profile Service</div>
-                <div class="arrow">▶</div>
+                <div class="arrow h">→</div>
                 <div class="node datastore">PostgreSQL<br>+ pgvector</div>
-                <div class="arrow">▶</div>
+                <div class="arrow h">→</div>
                 <div class="node process">Embedding Service<br>(OpenAI)</div>
-                <div class="arrow">▶</div>
+                <div class="arrow h">→</div>
                 <div class="node datastore">Vector Store<br>(pgvector / Pinecone)</div>
-                <div class="arrow">▶</div>
+                <div class="arrow h">→</div>
                 <div class="node process">Matching Engine<br>(cosine + rules)</div>
-                <div class="arrow">▶</div>
-                <div class="node decision">Rank?</div>
-                <div class="branch">
-                    <div class="arrow down">▼</div>
-                    <div class="node process">Recommendation Engine<br>(LTR + LLM re-rank)</div>
-                </div>
-                <div class="arrow">▶</div>
+                <div class="arrow h">→</div>
+                <div class="node process">Recommendation Engine<br>(LTR + LLM re-rank)</div>
+                <div class="arrow h">→</div>
                 <div class="node process">Delivery Layer<br>(Web, Email, Notifications)</div>
-                <div class="arrow">▶</div>
+                <div class="arrow h">→</div>
                 <div class="node process">Analytics & Feedback</div>
-                <div class="arrow">▶</div>
-                <div class="node start">Learn/Improve</div>
+                <div class="arrow h loop">↺</div>
+                <div class="node start">Model & Ranking Updates</div>
             </div>
         </section>
 
@@ -313,63 +309,63 @@
             <div class="section__header">
                 <p class="eyebrow">Complex architecture</p>
                 <h2>Full system blueprint with layers, data stores, and control paths.</h2>
-                <p class="lede">This view combines control (solid) and feedback (dashed) paths. Rectangles = services, cylinders = data, hexagons = AI models, diamonds = decisions.</p>
+                <p class="lede">Flow reads left-to-right across columns, then top-to-bottom inside each column. Control paths are solid; feedback paths are noted in text. Shapes: rectangles = services, cylinders = data, hexagons = AI models, diamonds = decisions.</p>
             </div>
             <div class="deep-diagram__grid">
                 <div class="diag-col">
-                    <h3>Ingress & capture</h3>
+                    <h3><span class="badge-step">1</span> Ingress & capture</h3>
                     <div class="node process">Client Apps</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node process">API Gateway</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node process">Auth & Rate Limit</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node process">Profile Service</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node datastore">PostgreSQL</div>
                 </div>
                 <div class="diag-col">
-                    <h3>Understanding</h3>
+                    <h3><span class="badge-step">2</span> Understanding</h3>
                     <div class="node hex">NER + Cleaning</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node hex">Sentence-BERT / MiniLM</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node datastore">Vector Store<br>(pgvector/Pinecone)</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node hex">Multi-label Classifier</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node decision">Profile tags OK?</div>
                 </div>
                 <div class="diag-col">
-                    <h3>Matching & ranking</h3>
+                    <h3><span class="badge-step">3</span> Matching & ranking</h3>
                     <div class="node process">Similarity Search</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node hex">Hybrid Recommender<br>(cosine + rules)</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node hex">Two-Tower Ready</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node hex">Learning-to-Rank</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node hex">LLM Re-ranker</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node decision">Top-K list</div>
                 </div>
                 <div class="diag-col">
-                    <h3>Delivery & feedback</h3>
+                    <h3><span class="badge-step">4</span> Delivery & feedback</h3>
                     <div class="node process">Delivery Layer<br>(UI/Email/Push)</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node process">Experimentation<br>(A/B, bandits)</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node datastore">Events/Analytics</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node process">Feature Store</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node hex">Retraining Jobs</div>
-                    <div class="arrow">▶</div>
+                    <div class="arrow v">↓</div>
                     <div class="node process">Model Registry</div>
                 </div>
             </div>
-            <p class="feedback-note">Dashed (not drawn here) feedback edges run from Delivery, Experimentation, and Events back to the Feature Store and Retraining Jobs to continually improve embeddings, classifiers, and ranking models.</p>
+            <p class="feedback-note">Feedback loop: signals from Delivery/Experimentation/Events flow back to the Feature Store and Retraining Jobs (dashed path) to update embeddings, classifiers, and ranking models; new models ship via Model Registry.</p>
         </section>
 
         <section id="roadmap" class="section">

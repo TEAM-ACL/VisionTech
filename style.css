@@ -491,17 +491,11 @@ small {
 .diagram__flow .arrow {
     font-size: 1rem;
     color: var(--muted);
+    font-weight: 700;
 }
 
-.diagram__flow .branch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.diagram__flow .down {
-    transform: translateY(-4px);
+.diagram__flow .arrow.loop {
+    color: var(--accent);
 }
 
 .deep-diagram__grid {
@@ -522,6 +516,20 @@ small {
 .deep-diagram__grid h3 {
     margin-top: 0;
     margin-bottom: 10px;
+}
+
+.badge-step {
+    display: inline-flex;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-right: 6px;
 }
 
 .deep-diagram__grid .node {
