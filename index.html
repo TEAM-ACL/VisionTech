@@ -309,6 +309,69 @@
             </div>
         </section>
 
+        <section id="deep-diagram" class="section deep-diagram">
+            <div class="section__header">
+                <p class="eyebrow">Complex architecture</p>
+                <h2>Full system blueprint with layers, data stores, and control paths.</h2>
+                <p class="lede">This view combines control (solid) and feedback (dashed) paths. Rectangles = services, cylinders = data, hexagons = AI models, diamonds = decisions.</p>
+            </div>
+            <div class="deep-diagram__grid">
+                <div class="diag-col">
+                    <h3>Ingress & capture</h3>
+                    <div class="node process">Client Apps</div>
+                    <div class="arrow">▶</div>
+                    <div class="node process">API Gateway</div>
+                    <div class="arrow">▶</div>
+                    <div class="node process">Auth & Rate Limit</div>
+                    <div class="arrow">▶</div>
+                    <div class="node process">Profile Service</div>
+                    <div class="arrow">▶</div>
+                    <div class="node datastore">PostgreSQL</div>
+                </div>
+                <div class="diag-col">
+                    <h3>Understanding</h3>
+                    <div class="node hex">NER + Cleaning</div>
+                    <div class="arrow">▶</div>
+                    <div class="node hex">Sentence-BERT / MiniLM</div>
+                    <div class="arrow">▶</div>
+                    <div class="node datastore">Vector Store<br>(pgvector/Pinecone)</div>
+                    <div class="arrow">▶</div>
+                    <div class="node hex">Multi-label Classifier</div>
+                    <div class="arrow">▶</div>
+                    <div class="node decision">Profile tags OK?</div>
+                </div>
+                <div class="diag-col">
+                    <h3>Matching & ranking</h3>
+                    <div class="node process">Similarity Search</div>
+                    <div class="arrow">▶</div>
+                    <div class="node hex">Hybrid Recommender<br>(cosine + rules)</div>
+                    <div class="arrow">▶</div>
+                    <div class="node hex">Two-Tower Ready</div>
+                    <div class="arrow">▶</div>
+                    <div class="node hex">Learning-to-Rank</div>
+                    <div class="arrow">▶</div>
+                    <div class="node hex">LLM Re-ranker</div>
+                    <div class="arrow">▶</div>
+                    <div class="node decision">Top-K list</div>
+                </div>
+                <div class="diag-col">
+                    <h3>Delivery & feedback</h3>
+                    <div class="node process">Delivery Layer<br>(UI/Email/Push)</div>
+                    <div class="arrow">▶</div>
+                    <div class="node process">Experimentation<br>(A/B, bandits)</div>
+                    <div class="arrow">▶</div>
+                    <div class="node datastore">Events/Analytics</div>
+                    <div class="arrow">▶</div>
+                    <div class="node process">Feature Store</div>
+                    <div class="arrow">▶</div>
+                    <div class="node hex">Retraining Jobs</div>
+                    <div class="arrow">▶</div>
+                    <div class="node process">Model Registry</div>
+                </div>
+            </div>
+            <p class="feedback-note">Dashed (not drawn here) feedback edges run from Delivery, Experimentation, and Events back to the Feature Store and Retraining Jobs to continually improve embeddings, classifiers, and ranking models.</p>
+        </section>
+
         <section id="roadmap" class="section">
             <div class="section__header">
                 <p class="eyebrow">Roadmap</p>

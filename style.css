@@ -504,6 +504,60 @@ small {
     transform: translateY(-4px);
 }
 
+.deep-diagram__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.deep-diagram__grid .diag-col {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+    background: #fff;
+    box-shadow: var(--shadow);
+}
+
+.deep-diagram__grid h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.deep-diagram__grid .node {
+    padding: 10px 12px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #f8fafc;
+}
+
+.deep-diagram__grid .hex {
+    border: 1px solid rgba(15, 98, 254, 0.25);
+    background: rgba(15, 98, 254, 0.07);
+}
+
+.deep-diagram__grid .datastore {
+    border: 1px solid rgba(255, 122, 89, 0.25);
+    background: rgba(255, 122, 89, 0.08);
+}
+
+.deep-diagram__grid .decision {
+    border: 2px dashed var(--accent);
+}
+
+.deep-diagram__grid .arrow {
+    text-align: center;
+    color: var(--muted);
+    margin: 6px 0;
+}
+
+.feedback-note {
+    margin-top: 12px;
+    color: var(--muted);
+}
+
 .site-footer {
     text-align: center;
     padding: 28px 7vw 36px;
