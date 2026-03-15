@@ -579,7 +579,7 @@ small {
 .svg-diagram svg {
     width: 100%;
     height: auto;
-    min-width: 720px;
+    min-width: 900px;
 }
 
 .svg-box { fill: #e8f0ff; stroke: #0b3d91; stroke-width: 2; }
