@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-label="VisionTech full system flowchart">
+  <style>
+    .box { fill:#e8f0ff; stroke:#1f4b99; stroke-width:2; rx:6; ry:6; }
+    .proc { fill:#e6ffe6; stroke:#2e7d32; stroke-width:2; rx:6; ry:6; }
+    .data { fill:#f3e8ff; stroke:#7b1fa2; stroke-width:2; rx:6; ry:6; }
+    .decision { fill:#ffc8ec; stroke:#d61b7b; stroke-width:2; }
+    .arrow { stroke:#4b5563; stroke-width:2.4; marker-end:url(#arrow); }
+    .arrow-thin { stroke:#4b5563; stroke-width:2; marker-end:url(#arrow); }
+    .group { fill:transparent; stroke-width:3; }
+    .g1 { stroke:#f59e0b; }
+    .g2 { stroke:#0ea5e9; }
+    .g3 { stroke:#d97706; }
+    .label { font:14px 'Space Grotesk', 'Segoe UI', sans-serif; font-weight:700; fill:#0f172a; }
+    .text { font:13px 'Space Grotesk','Segoe UI',sans-serif; fill:#0f172a; text-anchor:middle; dominant-baseline:middle; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+
+  <!-- Group 1 -->
+  <rect x="40" y="60" width="1320" height="220" class="group g1"/>
+  <text x="60" y="50" class="label">1. System Architecture</text>
+
+  <rect x="120" y="170" width="120" height="60" class="box"/>
+  <text x="180" y="200" class="text">Users</text>
+
+  <rect x="320" y="170" width="150" height="60" class="box"/>
+  <text x="395" y="200" class="text">Web App (Next.js)</text>
+
+  <rect x="540" y="170" width="150" height="60" class="proc"/>
+  <text x="615" y="200" class="text">Backend API</text>
+
+  <rect x="760" y="170" width="150" height="60" class="proc"/>
+  <text x="835" y="200" class="text">AI Matching Engine</text>
+
+  <rect x="980" y="170" width="150" height="60" class="data"/>
+  <text x="1055" y="200" class="text">Vector DB</text>
+
+  <rect x="760" y="240" width="150" height="60" class="data"/>
+  <text x="835" y="270" class="text">User Database</text>
+
+  <line x1="240" y1="200" x2="320" y2="200" class="arrow"/>
+  <line x1="470" y1="200" x2="540" y2="200" class="arrow"/>
+  <line x1="690" y1="200" x2="760" y2="200" class="arrow"/>
+  <line x1="910" y1="200" x2="980" y2="200" class="arrow"/>
+  <line x1="835" y1="230" x2="835" y2="240" class="arrow"/>
+  <line x1="910" y1="230" x2="1040" y2="230" class="arrow"/>
+  <line x1="1040" y1="230" x2="1040" y2="200" class="arrow"/>
+
+  <!-- Group 2 -->
+  <rect x="40" y="320" width="1320" height="260" class="group g2"/>
+  <text x="60" y="310" class="label">2. User &amp; AI Workflow</text>
+
+  <rect x="120" y="430" width="140" height="60" class="box"/>
+  <text x="190" y="460" class="text">User Signup</text>
+
+  <rect x="340" y="430" width="140" height="60" class="proc"/>
+  <text x="410" y="460" class="text">Create Profile</text>
+
+  <rect x="560" y="430" width="170" height="60" class="proc"/>
+  <text x="645" y="460" class="text">Skill &amp; Interest Input</text>
+
+  <rect x="800" y="430" width="170" height="60" class="proc"/>
+  <text x="885" y="460" class="text">AI Embedding</text>
+
+  <polygon points="1050,410 1100,460 1050,510 1000,460" class="decision"/>
+  <text x="1050" y="460" class="text">Match Found?</text>
+
+  <rect x="1220" y="430" width="140" height="60" class="proc"/>
+  <text x="1290" y="460" class="text">Collaboration Space</text>
+
+  <line x1="260" y1="460" x2="340" y2="460" class="arrow"/>
+  <line x1="480" y1="460" x2="560" y2="460" class="arrow"/>
+  <line x1="730" y1="460" x2="800" y2="460" class="arrow"/>
+  <line x1="970" y1="460" x2="1000" y2="460" class="arrow"/>
+  <line x1="1100" y1="460" x2="1220" y2="460" class="arrow"/>
+  <text x="1160" y="445" class="text">Yes</text>
+  <line x1="1030" y1="510" x2="645" y2="510" class="arrow"/>
+  <text x="835" y="525" class="text">No</text>
+
+  <!-- Group 3 -->
+  <rect x="40" y="610" width="1320" height="220" class="group g3"/>
+  <text x="60" y="600" class="label">3. VisionTech AI Model Structure</text>
+
+  <rect x="120" y="710" width="140" height="60" class="data"/>
+  <text x="190" y="740" class="text">User Data</text>
+
+  <rect x="360" y="710" width="170" height="60" class="proc"/>
+  <text x="445" y="740" class="text">Embedding Model</text>
+
+  <rect x="620" y="710" width="170" height="60" class="proc"/>
+  <text x="705" y="740" class="text">Vector Matching</text>
+
+  <rect x="880" y="710" width="200" height="60" class="proc"/>
+  <text x="980" y="740" class="text">Recommendation AI</text>
+
+  <line x1="260" y1="740" x2="360" y2="740" class="arrow"/>
+  <line x1="530" y1="740" x2="620" y2="740" class="arrow"/>
+  <line x1="790" y1="740" x2="880" y2="740" class="arrow"/>
+  </svg>
