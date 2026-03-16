@@ -591,6 +591,16 @@ small {
 .svg-group-outline { fill: transparent; stroke-width: 3; }
 .svg-group-label { font-size: 14px; font-weight: 700; fill: #0f172a; }
 
+.diagram-img {
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
 .site-footer {
     text-align: center;
     padding: 28px 7vw 36px;
