@@ -246,6 +246,10 @@ h3 {
     margin-bottom: 10px;
 }
 
+.muted {
+    color: var(--muted);
+}
+
 ul, ol {
     margin: 0;
     padding-left: 18px;
@@ -572,6 +576,55 @@ small {
 .feedback-note {
     margin-top: 12px;
     color: var(--muted);
+}
+
+.team__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.team-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15, 98, 254, 0.06), rgba(255, 122, 89, 0.06));
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.team-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.team-card .role {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tag {
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(15, 98, 254, 0.08);
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid rgba(15, 98, 254, 0.15);
 }
 
 .svg-diagram {
